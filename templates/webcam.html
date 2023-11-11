@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel ="stylesheet" href="{{url_for('static',filename='style/webcam.css')}}" />
+  <script src="{{url_for('static',filename='javascript/script.js')}}"></script>
+</head>
+
+  <body>
+    <h1>Live streaming</h1>
+    <img src="{{ url_for('video') }}" style="height:100vh;width:50%;margin:0 auto;"/>
+    </body>
+
+
+</html>
