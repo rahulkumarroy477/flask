@@ -84,7 +84,7 @@ def predicted_person_width(focal_length, known_distance, width_in_frame):
     return predicted_width
 
 # reading the reference image from dir 
-ref_person = cv.imread('ReferenceImages/rimg1.png')
+ref_person = cv.imread('images/rimg1.png')
 
 person_data = object_detector(ref_person)
 person_width_in_rf = person_data[0][1]
@@ -94,7 +94,7 @@ print(f"Person width in pixels : {person_width_in_rf}")
 # finding focal length 
 focal_person = focal_length_finder(KNOWN_DISTANCE, PERSON_WIDTH, person_width_in_rf)
 cap = cv.VideoCapture(0)
-overlay = cv.imread('person-icon.png',cv.IMREAD_UNCHANGED)
+overlay = cv.imread('images/person-icon.png',cv.IMREAD_UNCHANGED)
 width = int(cap.get(3))
 height = int(cap.get(4))
 size = ''
